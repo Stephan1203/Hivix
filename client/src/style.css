@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Stick", sans-serif;
+  --shadow-right: 0 0 10px black;
+}
+

@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "client/tsconfig*": true,
+    "client/deno.lock": true,
+    "uv.lock": true,
+    ".python-version": true,
+    ".venv": true,
+    "python-envs.terminal.autoActivationType": false,
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvInCurrentTerminal": false
+
+  }
+}
