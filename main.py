@@ -1,5 +1,8 @@
+import json
 import asyncio
 from websockets.asyncio.server import serve
+from game.board import pieces
+
 
 clients = []
 
@@ -8,7 +11,8 @@ async def onConnected(ws):
 
     clients.append(ws)
 
-    await ws.send(f"Send: Привет")
+    await ws.send(json.dumps({"type": "message", "value": "send: Привет"}))
+    await ws.send(json.dumps({"type": "pieces", "value": pieces}))
 
     async for text in ws:
         print(f"Received: {text}")

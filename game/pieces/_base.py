@@ -6,7 +6,6 @@ class Color(Enum):
   black = 2
 
 board = [[[] for i in range(57)] for i in range(57)]
-print(board)
 
 @dataclass
 class Piece:
@@ -20,9 +19,9 @@ class Piece:
 
   def around(self, x):
     if x % 2:
-      return [(0,-1), (+1,-1), (+1,0), (0,+1), (-1,0), (-1,-1)]
-    else:
       return [(0,-1), (+1,0), (+1,+1), (0,+1), (-1,+1), (-1,0)]
+    else:
+      return [(0,-1), (+1,-1), (+1,0), (0,+1), (-1,0), (-1,-1)]
 
   def can_move_on_ground(self, board, x, y):
     for idx, (i,j) in enumerate(self.around(x)):

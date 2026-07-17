@@ -13,6 +13,6 @@ onMounted(() => {
 <template>
   <div class="flex h-full">
     <Navbar/>
-    <Board v-if="game" :game/>
+    <Board v-if="game" :game :cell-size="50"/>
   </div>
 </template>
