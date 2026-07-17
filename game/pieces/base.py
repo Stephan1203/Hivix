@@ -5,6 +5,9 @@ class Color(Enum):
   white = 1
   black = 2
 
+board = [[[] for i in range(57)] for i in range(57)]
+print(board)
+
 @dataclass
 class Piece:
   color: Color
